@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>快玩游戏下载</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	function preloadedImages() 
+	{ 
+	  var imgname=new Array();
+	  var img = new Array();
+	  imgname[0]="../images/btn_1.gif";
+	  imgname[1]="../images/btn_2.gif";
+	  
+	  for (i=0;i<=imgname.length-1;i++)
+	  {
+	      img[i] = new Image();
+	      img[i].src = imgname[i];
+	  }
+	}
+</script>
+    <body style="margin: 0 0 0 0;" onload="preloadedImages();">
+        <table cellspacing="0" cellpadding="0" width="100%" height="100%;" align="center"
+            border="0">
+            <tr>
+                <td  align="center" style=" height:400px; background-image:url('../images/kwdown.jpg'); background-repeat:no-repeat; background-position:center;background-color:#013064;">
+                <div style="background-image:url('../images/btn_1.gif'); height:43px; width:148px; margin-top:120px; cursor:pointer;" onmousemove="this.style.backgroundImage='url(../images/btn_2.gif)'" onmouseout="this.style.backgroundImage='url(../images/btn_1.gif)'" onclick="location.href='http://dl.kuaiwan.com/KuaiwanSetup.exe'">
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color:#013064; width:100%; height: 121px; ">
+                
+                </td>
+            </tr>
+        </table>
+    </body>
+<span style="display:none"></span>
+</html>

@@ -1,0 +1,19 @@
+body{margin:0px;background-color:black;font-size:12px;color:#99B6D6;line-height:17px;}
+*{margin:0px;padding:0px;}
+#outer{position:absolute;top:40%;width:100%;float:left;z-index:10000;}
+#outer2{position:absolute;top:-50px;width:100%;}
+#wrapper{position:relative;margin:auto;padding-left:30px;width:510px;height:320px;}
+#left{width:173px;float:left;margin:0 10px 0 0;}
+#right{width:320px;float:left;margin-top:3px;}
+#btn{width:173px;height:55px;background-image:url(../images/down_btn.jpg);}
+#btn>a{width:173px;height:55px;display:block;}
+a{color:#CBDEF0;}
+a:hover{text-decoration:none;}
+#ver{width:173px;height:55px;cursor:hand;}
+#text{position:relative;top:33px;left:20px;	}
+#shadow{margin-top:12px;width:173px;height:45px;background-image:url(../images/down_shadow.jpg);clear:both;}
+#bottom{position:absolute;bottom:0px;height:29px;width:100%;background:url(../images/player_bg.gif)}
+#player_left{float:left;width:75px;height:29px;}
+#player_right{float:right;width:259px;height:29px;background:url(../images/player_right.gif);}
+#mark{position:absolute;width:154px;height:198px;float:right;right:0px;bottom:0px;;z-index:0;}
+.clear{clear:both;}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>Maccms DPlayer</title>
+    <style type="text/css">
+        html,body{width:100%;height:100%; padding:0; margin:0;}
+        #playerCnt{width:100%;height:100%;}
+    </style>
+    <link rel="stylesheet" href="/static/player/dplayer/DPlayer.min.css">
+    <script type="text/javascript" src="/static/player/dplayer/flv.min.js"></script>
+    <script type="text/javascript" src="/static/player/dplayer/hls.min.js"></script>
+    <script type="text/javascript" src="/static/player/dplayer/dash.all.min.js"></script>
+    <script type="text/javascript" src="/static/player/dplayer/webtorrent.min.js"></script>
+    <script type="text/javascript" src="/static/player/dplayer/DPlayer.min.js"></script>
+</head>
+<body>
+<div id="playerCnt"></div>
+<script type="text/javascript">
+function getQS(name){
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if (r!=null) return unescape(r[2]); return ''; 
+}
+var vurl = getQS('url');
+var type='normal';
+var live=false;
+if(vurl.indexOf('.m3u8')>-1){
+    type='hls';
+    live=true;
+}
+else if(vurl.indexOf('magnet:')>-1){
+    type='webtorrent';
+}
+else if(vurl.indexOf('.flv')>-1){
+    type='flv';
+}
+else if(vurl.indexOf('.mpd')>-1){
+    type='dash';
+}
+const dp = new DPlayer({
+    container: document.getElementById('playerCnt'),
+	autoplay: true,
+    screenshot: false,
+    loop: true,
+    video: {
+        url: vurl,
+        live: live,
+        type:type
+    },
+    contextmenu: [
+        
+    ]
+});
+</script>
+</body>
+</html>

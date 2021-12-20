@@ -1,0 +1,1 @@
+if (MacPlayer.Status) {} else {$("#install").attr('src', '//union.maccms.com/html/' + MacPlayer.PlayFrom + '.html')}
